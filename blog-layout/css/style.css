@@ -1,0 +1,114 @@
+body {
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
+	background-color: #fff;
+	font-size: 1.2em;
+	line-height: 1.6;
+}
+
+a {
+	color: inherit;
+}
+
+a:hover {
+	color: #03a87c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 200;
+}
+
+nav.horisontal {
+	top: 0px;
+	width: 100%;
+	position: sticky;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+}
+
+nav.horisontal ul {
+	list-style: none;
+	text-align: center;
+	padding: 0 auto;
+	margin: 0px;
+}
+
+nav.horisontal li {
+	display: inline-block;	
+}
+
+
+nav.horisontal a {
+	margin-right: 10px;
+	margin-left: 10px;
+	letter-spacing: .2rem;
+	line-height: 4rem;	
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+nav.horisontal a.active {
+	color: #03a87c;
+	border-bottom: 1px solid #03a87c;
+}
+
+@media screen and (max-width: 640px) {
+	nav.horisontal a{
+		line-height: 3rem;
+		font-size: 80%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.content {
+		font-size: .8em;
+	}
+}
+
+.posts {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+@media screen and (max-width: 640px) {
+	.posts {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+.post {
+	border-bottom: 1px solid #ccc;
+	clear: both;
+}
+
+.post .status {
+	display: flex;
+	flex-flow: row wrap;
+	padding-bottom: 10px;
+}
+
+.post .status > *{
+	flex: 1 100%;
+}
+
+.post .status a.readmore {
+	text-decoration: none;
+	color: #999;
+	font-size: .9rem;
+	padding-bottom: 10px;
+}
+
+/* We tell both sidebars to share a row */
+.post .status span { flex: 1 auto; }
+.post .status .comments-count {	
+	text-align: right;	
+}
+.post span.mdi {
+	margin-right: 5px;
+}	
+
