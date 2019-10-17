@@ -13,22 +13,29 @@ Before you can build this project, you must install and configure the following 
 
 After installing Node, you should be able to run the following command to install development tools.
 You will only need to run this command when dependencies change in [package.json](package.json).
-
-    npm install
-
+```bash
+npm install
+```
 We use npm scripts and [Webpack][] as our build system.
 
 Run the following commands in two separate terminals to create a blissful development experience where your browser
 auto-refreshes when files change on your hard drive.
-
-    ./mvnw
-    npm start
-
+```bash
+./mvnw
+npm start
+```
 Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
 specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
 Add the `help` flag on any command to see how you can use it. For example, `npm help update`.
 
 The `npm run` command will list all of the scripts available to run for this project.
+
+### Generating entities
+
+To generate DB schema, JPA entities and VueJS Interface use next command 
+```bash
+jhipster import-jdl blog.jdl --blueprint vuejs
+```
 
 ### Service workers
 
@@ -51,13 +58,13 @@ Note: workbox creates the respective service worker and dynamically generate the
 ### Managing dependencies
 
 For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
-
-    npm install --save --save-exact leaflet
-
+```bash
+npm install --save --save-exact leaflet
+```
 To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
-
-    npm install --save-dev --save-exact @types/leaflet
-
+```bash
+npm install --save-dev --save-exact @types/leaflet
+```
 Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
 Edit [src/main/webapp/app/main.ts](src/main/webapp/app/main.ts) file:
 
@@ -80,22 +87,22 @@ For further instructions on how to develop with JHipster, have a look at [Using 
 You can also use [Vue CLI][] to display the project using vue UI.
 
 For example, the following command:
-
-    vue ui
-
+```bash
+vue ui
+```
 will generate open Vue Project Manager. From there, you'll be able to manage your project as any other Vue.js projects.
 
 ## Building for production
 
 To optimize the blogAPI application for production, run:
-
-    ./mvnw -Pprod clean package
-
+```bash
+./mvnw -Pprod clean package
+```
 This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
 To ensure everything worked, run:
-
-    java -jar target/*.war
-
+```bash
+java -jar target/*.war
+```
 Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
 
 Refer to [Using JHipster in production][] for more details.
@@ -103,15 +110,15 @@ Refer to [Using JHipster in production][] for more details.
 ## Testing
 
 To launch your application's tests, run:
-
-    ./mvnw clean test
-
+```bash
+./mvnw clean test
+```
 ### Client tests
 
 Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in [src/test/javascript/](src/test/javascript/) and can be run with:
-
-    npm test
-
+```bash
+npm test
+```
 For more information, refer to the [Running tests page][].
 
 ### Code quality
@@ -135,22 +142,22 @@ For more information, refer to the [Code quality page][].
 You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
 
 For example, to start a mysql database in a docker container, run:
-
-    docker-compose -f src/main/docker/mysql.yml up -d
-
+```bash
+docker-compose -f src/main/docker/mysql.yml up -d
+```
 To stop it and remove the container, run:
-
-    docker-compose -f src/main/docker/mysql.yml down
-
+```bash
+docker-compose -f src/main/docker/mysql.yml down
+```
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
-
-    ./mvnw package -Pprod verify jib:dockerBuild
-
+```bash
+./mvnw package -Pprod verify jib:dockerBuild
+```
 Then run:
-
-    docker-compose -f src/main/docker/app.yml up -d
-
+```bash
+docker-compose -f src/main/docker/app.yml up -d
+```
 For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
 
 ## Continuous Integration (optional)

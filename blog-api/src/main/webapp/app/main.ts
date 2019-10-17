@@ -22,6 +22,10 @@ import '../content/scss/vendor.scss';
 import AlertService from '@/shared/alert/alert.service';
 import ConfigurationService from '@/admin/configuration/configuration.service';
 
+import BlogService from '@/entities/blog/blog.service';
+import PostService from '@/entities/post/post.service';
+import TagService from '@/entities/tag/tag.service';
+import CategoryService from '@/entities/category/category.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 Vue.config.productionTip = false;
@@ -74,6 +78,10 @@ new Vue({
     logsService: () => new LogsService(),
     metricsService: () => new MetricsService(),
     alertService: () => alertService,
+    blogService: () => new BlogService(),
+    postService: () => new PostService(),
+    tagService: () => new TagService(),
+    categoryService: () => new CategoryService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService
   },

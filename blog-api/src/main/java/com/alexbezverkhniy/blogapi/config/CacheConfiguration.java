@@ -42,6 +42,14 @@ public class CacheConfiguration {
             createCache(cm, com.alexbezverkhniy.blogapi.domain.User.class.getName());
             createCache(cm, com.alexbezverkhniy.blogapi.domain.Authority.class.getName());
             createCache(cm, com.alexbezverkhniy.blogapi.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.alexbezverkhniy.blogapi.domain.Blog.class.getName());
+            createCache(cm, com.alexbezverkhniy.blogapi.domain.Post.class.getName());
+            createCache(cm, com.alexbezverkhniy.blogapi.domain.Post.class.getName() + ".tags");
+            createCache(cm, com.alexbezverkhniy.blogapi.domain.Post.class.getName() + ".categories");
+            createCache(cm, com.alexbezverkhniy.blogapi.domain.Tag.class.getName());
+            createCache(cm, com.alexbezverkhniy.blogapi.domain.Tag.class.getName() + ".posts");
+            createCache(cm, com.alexbezverkhniy.blogapi.domain.Category.class.getName());
+            createCache(cm, com.alexbezverkhniy.blogapi.domain.Category.class.getName() + ".posts");
             // jhipster-needle-ehcache-add-entry
         };
     }
