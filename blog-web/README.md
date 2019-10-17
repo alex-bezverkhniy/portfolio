@@ -14,20 +14,32 @@ Before you can build this project, you must install and configure the following 
 After installing Node, you should be able to run the following command to install development tools.
 You will only need to run this command when dependencies change in [package.json](package.json).
 
-    npm install
+```bash
+npm install
+```
 
 We use npm scripts and [Webpack][] as our build system.
 
 Run the following commands in two separate terminals to create a blissful development experience where your browser
 auto-refreshes when files change on your hard drive.
 
-    npm start
+```bash
+npm start
+```
 
 Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
 specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
 Add the `help` flag on any command to see how you can use it. For example, `npm help update`.
 
 The `npm run` command will list all of the scripts available to run for this project.
+
+### Generate model and components by .jdl
+
+To generate model and components by .jdl use next command
+
+```bash
+jhipster import-jdl blog.jdl --blueprint vuejs --skip-server --auth jwt --db sql
+```
 
 ### Service workers
 
@@ -51,11 +63,15 @@ Note: workbox creates the respective service worker and dynamically generate the
 
 For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
 
-    npm install --save --save-exact leaflet
+```bash
+npm install --save --save-exact leaflet
+```
 
 To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
 
-    npm install --save-dev --save-exact @types/leaflet
+```bash
+npm install --save-dev --save-exact @types/leaflet
+```
 
 Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
 Edit [src/main/webapp/app/main.ts](src/main/webapp/app/main.ts) file:
@@ -80,7 +96,9 @@ You can also use [Vue CLI][] to display the project using vue UI.
 
 For example, the following command:
 
-    vue ui
+```bash
+vue ui
+```
 
 will generate open Vue Project Manager. From there, you'll be able to manage your project as any other Vue.js projects.
 
@@ -99,13 +117,17 @@ Refer to [Using JHipster in production][] for more details.
 
 To launch your application's tests, run:
 
-    ./gradlew test
+```bash
+./gradlew test
+```
 
 ### Client tests
 
 Unit tests are run by [Jest][] and written with [Jasmine][]. They're located in [src/test/javascript/](src/test/javascript/) and can be run with:
 
-    npm test
+```bash
+npm test
+```
 
 For more information, refer to the [Running tests page][].
 
@@ -131,18 +153,24 @@ You can use Docker to improve your JHipster development experience. A number of 
 
 For example, to start a sql database in a docker container, run:
 
-    docker-compose -f src/main/docker/sql.yml up -d
+```bash
+docker-compose -f src/main/docker/sql.yml up -d
+```
 
 To stop it and remove the container, run:
 
-    docker-compose -f src/main/docker/sql.yml down
+```bash
+docker-compose -f src/main/docker/sql.yml down
+```
 
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
 
 Then run:
 
-    docker-compose -f src/main/docker/app.yml up -d
+```bash
+docker-compose -f src/main/docker/app.yml up -d
+```
 
 For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
 

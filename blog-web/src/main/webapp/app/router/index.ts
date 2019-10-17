@@ -24,6 +24,30 @@ const JhiLogsComponent = () => import('../admin/logs/logs.vue');
 const JhiAuditsComponent = () => import('../admin/audits/audits.vue');
 const JhiMetricsComponent = () => import('../admin/metrics/metrics.vue');
 /* tslint:disable */
+// prettier-ignore
+const Blog = () => import('../entities/blog/blog.vue');
+// prettier-ignore
+const BlogUpdate = () => import('../entities/blog/blog-update.vue');
+// prettier-ignore
+const BlogDetails = () => import('../entities/blog/blog-details.vue');
+// prettier-ignore
+const Post = () => import('../entities/post/post.vue');
+// prettier-ignore
+const PostUpdate = () => import('../entities/post/post-update.vue');
+// prettier-ignore
+const PostDetails = () => import('../entities/post/post-details.vue');
+// prettier-ignore
+const Tag = () => import('../entities/tag/tag.vue');
+// prettier-ignore
+const TagUpdate = () => import('../entities/tag/tag-update.vue');
+// prettier-ignore
+const TagDetails = () => import('../entities/tag/tag-details.vue');
+// prettier-ignore
+const Category = () => import('../entities/category/category.vue');
+// prettier-ignore
+const CategoryUpdate = () => import('../entities/category/category-update.vue');
+// prettier-ignore
+const CategoryDetails = () => import('../entities/category/category-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 Vue.use(Router);
@@ -140,6 +164,106 @@ export default new Router({
       name: 'JhiConfigurationComponent',
       component: JhiConfigurationComponent,
       meta: { authorities: ['ROLE_ADMIN'] }
+    }
+    ,
+    {
+      path: '/entity/blog',
+      name: 'Blog',
+      component: Blog,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/blog/new',
+      name: 'BlogCreate',
+      component: BlogUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/blog/:blogId/edit',
+      name: 'BlogEdit',
+      component: BlogUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/blog/:blogId/view',
+      name: 'BlogView',
+      component: BlogDetails,
+      meta: { authorities: ['ROLE_USER'] }
+    }
+    ,
+    {
+      path: '/entity/post',
+      name: 'Post',
+      component: Post,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/post/new',
+      name: 'PostCreate',
+      component: PostUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/post/:postId/edit',
+      name: 'PostEdit',
+      component: PostUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/post/:postId/view',
+      name: 'PostView',
+      component: PostDetails,
+      meta: { authorities: ['ROLE_USER'] }
+    }
+    ,
+    {
+      path: '/entity/tag',
+      name: 'Tag',
+      component: Tag,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/tag/new',
+      name: 'TagCreate',
+      component: TagUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/tag/:tagId/edit',
+      name: 'TagEdit',
+      component: TagUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/tag/:tagId/view',
+      name: 'TagView',
+      component: TagDetails,
+      meta: { authorities: ['ROLE_USER'] }
+    }
+    ,
+    {
+      path: '/entity/category',
+      name: 'Category',
+      component: Category,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/category/new',
+      name: 'CategoryCreate',
+      component: CategoryUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/category/:categoryId/edit',
+      name: 'CategoryEdit',
+      component: CategoryUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/category/:categoryId/view',
+      name: 'CategoryView',
+      component: CategoryDetails,
+      meta: { authorities: ['ROLE_USER'] }
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ]

@@ -26,6 +26,22 @@
                         <font-awesome-icon icon="th-list" />
                         <span>Entities</span>
                     </span>
+                    <b-dropdown-item to="/entity/blog">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Blog</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/entity/post">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Post</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/entity/tag">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Tag</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/entity/category">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Category</span>
+                    </b-dropdown-item>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown
