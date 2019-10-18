@@ -4,13 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
     <!--
-        Added the constraints for entity Category.
+        Added the constraints for entity Blog.
     -->
-    <changeSet id="20191017160055-2" author="jhipster">
+    <changeSet id="20191017215719-2" author="jhipster">
         
         <addForeignKeyConstraint baseColumnNames="user_id"
-                                 baseTableName="category"
-                                 constraintName="fk_category_user_id"
+                                 baseTableName="blog"
+                                 constraintName="fk_blog_user_id"
                                  referencedColumnNames="id"
                                  referencedTableName="jhi_user"/>
 

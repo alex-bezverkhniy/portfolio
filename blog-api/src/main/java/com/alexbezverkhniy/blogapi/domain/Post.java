@@ -32,7 +32,8 @@ public class Post implements Serializable {
     @Column(name = "title", nullable = false)
     private String title;
 
-    @NotNull
+    
+    @Lob
     @Column(name = "content", nullable = false)
     private String content;
 

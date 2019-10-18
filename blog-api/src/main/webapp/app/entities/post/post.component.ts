@@ -1,11 +1,15 @@
-import { Component, Inject, Vue } from 'vue-property-decorator';
+import { mixins } from 'vue-class-component';
+
+import { Component, Inject } from 'vue-property-decorator';
 import { IPost } from '@/shared/model/post.model';
 import AlertService from '@/shared/alert/alert.service';
+
+import JhiDataUtils from '@/shared/data/data-utils.service';
 
 import PostService from './post.service';
 
 @Component
-export default class Post extends Vue {
+export default class Post extends mixins(JhiDataUtils) {
   @Inject('alertService') private alertService: () => AlertService;
   @Inject('postService') private postService: () => PostService;
   public currentSearch = '';

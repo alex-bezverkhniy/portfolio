@@ -1,10 +1,13 @@
-import { Component, Vue, Inject } from 'vue-property-decorator';
+import { Component, Inject } from 'vue-property-decorator';
+
+import { mixins } from 'vue-class-component';
+import JhiDataUtils from '@/shared/data/data-utils.service';
 
 import { IPost } from '@/shared/model/post.model';
 import PostService from './post.service';
 
 @Component
-export default class PostDetails extends Vue {
+export default class PostDetails extends mixins(JhiDataUtils) {
   @Inject('postService') private postService: () => PostService;
   public post: IPost = {};
 

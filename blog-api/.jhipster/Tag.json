@@ -21,7 +21,7 @@
             "ownerSide": false
         }
     ],
-    "changelogDate": "20191017160054",
+    "changelogDate": "20191017215721",
     "entityTableName": "tag",
     "dto": "no",
     "pagination": "infinite-scroll",

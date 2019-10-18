@@ -21,8 +21,8 @@
                     </div>
                     <div class="form-group">
                         <label class="form-control-label" for="post-content">Content</label>
-                        <input type="text" class="form-control" name="content" id="post-content"
-                            :class="{'valid': !$v.post.content.$invalid, 'invalid': $v.post.content.$invalid }" v-model="$v.post.content.$model"  required/>
+                        <textarea class="form-control" name="content" id="post-content"
+                            :class="{'valid': !$v.post.content.$invalid, 'invalid': $v.post.content.$invalid }" v-model="$v.post.content.$model"  required></textarea>
                         <div v-if="$v.post.content.$anyDirty && $v.post.content.$invalid">
                             <small class="form-text text-danger" v-if="!$v.post.content.required">
                                 This field is required.

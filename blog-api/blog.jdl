@@ -6,7 +6,7 @@ entity Blog {
 
 entity Post {
 	title String required,
-	content String required,
+	content TextBlob required,
 	date ZonedDateTime required
 }
 
