@@ -18,6 +18,7 @@ import UserManagementService from '@/admin/user-management/user-management.servi
 import LoginService from './account/login.service';
 import AccountService from './account/account.service';
 
+import '@mdi/font/css/materialdesignicons.min.css';
 import '../content/scss/vendor.scss';
 import AlertService from '@/shared/alert/alert.service';
 import ConfigurationService from '@/admin/configuration/configuration.service';

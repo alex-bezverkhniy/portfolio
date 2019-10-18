@@ -10,7 +10,8 @@
         },
         {
             "fieldName": "content",
-            "fieldType": "String",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
             "fieldValidateRules": [
                 "required"
             ]
@@ -48,7 +49,7 @@
             "ownerSide": true
         }
     ],
-    "changelogDate": "20191017160053",
+    "changelogDate": "20191017215720",
     "entityTableName": "post",
     "dto": "no",
     "pagination": "infinite-scroll",

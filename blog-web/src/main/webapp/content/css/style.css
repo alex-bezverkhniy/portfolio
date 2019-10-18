@@ -1,0 +1,66 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 200 !important;
+}
+
+b,
+strong {
+  font-weight: 800 !important;
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    font-size: 0.8em;
+  }
+}
+
+.posts {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 640px) {
+  .posts {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.post {
+  border-bottom: 1px solid #ccc;
+  clear: both;
+}
+
+.post .status {
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 10px;
+}
+
+.post .status > * {
+  flex: 1 100%;
+}
+
+.post .status a.readmore {
+  text-decoration: none;
+  color: #999;
+  font-size: 0.9rem;
+  padding-bottom: 10px;
+}
+
+/* We tell both sidebars to share a row */
+.post .status span {
+  flex: 1 auto;
+}
+.post .status .comments-count {
+  text-align: right;
+}
+.post span.mdi {
+  margin-right: 5px;
+}

@@ -2,6 +2,7 @@
     "name": "Blog",
     "short_name": "Blog",
     "icons": [
+/*        
         {
             "src": "./content/images/jhipster_family_member_2_head-192.png",
             "sizes": "192x192",
@@ -22,6 +23,8 @@
             "sizes": "512x512",
             "type": "image/png"
         }
+
+*/
     ],
     "theme_color": "#000000",
     "background_color": "#e0e0e0",

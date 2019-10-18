@@ -39,14 +39,16 @@ import VueCookie from 'vue-cookie';
 import Vuelidate from 'vuelidate';
 import Vue2Filters from 'vue2-filters';
 
-import * as filters from '@/shared/date/filters';
+import * as dateFilters from '@/shared/date/filters';
+import * as textFilters from '@/shared/text/filters';
 
 export function initVueApp(vue) {
   vue.use(VueCookie);
   vue.use(Vuelidate);
   vue.use(Vue2Filters);
   setupAxiosInterceptors(() => console.log('Unauthorized!'));
-  filters.initFilters();
+  dateFilters.initFilters();
+  textFilters.initFilters();
 }
 
 export function initFortAwesome(vue) {

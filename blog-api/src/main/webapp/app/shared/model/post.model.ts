@@ -5,7 +5,7 @@ import { ICategory } from '@/shared/model/category.model';
 export interface IPost {
   id?: number;
   title?: string;
-  content?: string;
+  content?: any;
   date?: Date;
   blog?: IBlog;
   tags?: ITag[];
@@ -16,7 +16,7 @@ export class Post implements IPost {
   constructor(
     public id?: number,
     public title?: string,
-    public content?: string,
+    public content?: any,
     public date?: Date,
     public blog?: IBlog,
     public tags?: ITag[],
